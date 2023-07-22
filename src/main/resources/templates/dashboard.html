@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>Employee Dashboard</title>
+    <!-- Add your CSS styles here -->
+    <style>
+        body {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+            margin: 0;
+        }
+
+        .container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+
+        .box {
+            width: 200px;
+            height: 200px;
+            background-color: #f2f2f2;
+            border: 1px solid #ddd;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            cursor: pointer;
+            margin: 10px;
+        }
+    </style>
+</head>
+<body>
+<h1>Welcome to the Employee Dashboard</h1>
+
+<form>
+    <div class="container">
+        <div class="box" onclick="location.href='/leave-tracker'">
+            <h2>Leave Tracker</h2>
+        </div>
+
+        <div class="box" onclick="location.href='/attendance'">
+            <h2>Attendance</h2>
+        </div>
+
+        <div class="box" onclick="location.href='/organization'">
+            <h2>Organization</h2>
+        </div>
+
+        <div class="box" onclick="location.href='/compensation'">
+            <h2>Compensation</h2>
+        </div>
+
+        <div class="box" onclick="location.href='/self-service'">
+            <h2>Self Service</h2>
+        </div>
+    </div>
+</form>
+</body>
+</html>

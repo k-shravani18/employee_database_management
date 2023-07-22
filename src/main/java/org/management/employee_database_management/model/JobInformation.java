@@ -1,9 +1,16 @@
 package org.management.employee_database_management.model;
 
+import javax.persistence.Entity;
+import javax.persistence.Id;
+import lombok.Data;
+
 import java.math.BigDecimal;
 import java.sql.Date;
-
+@Data
+@Entity
 public class JobInformation {
+    @Id
+    private Integer jobInfoId;
     private String title;
     private String employeeID;
     private String department;
@@ -14,6 +21,6 @@ public class JobInformation {
     private Date startDate;
     private BigDecimal salary;
     private Date dateOfJoining;
-    private EmergencyContact emergencyContact;
+//    private EmergencyContact emergencyContact;
     private String healthConditions;
 }

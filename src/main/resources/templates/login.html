@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>Login</title>
+    <script>
+        function showRegistrationPage() {
+            window.location.href = "/api/users/register";
+        }
+    </script>
+</head>
+<body>
+<h2>Login</h2>
+<form th:action="@{/api/users/processLogin}" method="post">
+    <label for="username">Username:</label>
+    <input type="text" id="username" name="username" required><br><br>
+
+    <label for="password">Password:</label>
+    <input type="password" id="password" name="password" required><br><br>
+
+    <input type="submit" value="Login">
+</form>
+<p>Don't have an account? <a href="#" th:onclick="|showRegistrationPage()|">Register</a></p>
+</body>
+</html>

@@ -1,6 +1,9 @@
 package org.management.employee_database_management.model;
 
-import jakarta.persistence.Entity;
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
+import javax.persistence.Id;
 import lombok.Data;
 
 import java.math.BigDecimal;
@@ -10,6 +13,9 @@ import java.util.List;
 @Data
 @Entity
 public class Employee {
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    private Integer employeeId;
     private String name;
     private String address;
     private String phoneNumber;
@@ -19,7 +25,7 @@ public class Employee {
     private String PAN;
     private Date birthDate;
     private String specialInterests;
-    private List<String> learningInstitutions;
+//    private List<String> learningInstitutions;
     private String maritalStatus;
     private String spouseName;
     private String spouseEmployer;
